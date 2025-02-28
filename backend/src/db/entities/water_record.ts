@@ -19,7 +19,7 @@ export class WaterRecord {
   @Column()
   amount!: number;
 
-  @Column()
+  @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP" })
   date!: Date;
 
   @CreateDateColumn()

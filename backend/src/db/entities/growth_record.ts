@@ -19,7 +19,7 @@ export class GrowthRecord {
   @Column()
   height!: number;
 
-  @Column()
+  @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP" })
   date!: Date;
 
   @CreateDateColumn()
